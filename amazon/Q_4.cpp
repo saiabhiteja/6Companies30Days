@@ -55,8 +55,8 @@ pair<int,string> mcm_string_2(int arr[],int i,int j){
     int ans = INT_MAX ;
     string str;
     for(int k = i;k<=j-1;k++){
-        auto t1 = mcm_string(arr,i,k);
-        auto t2 = mcm_string(arr,k+1,j);
+        auto t1 = mcm_string_2(arr,i,k);
+        auto t2 = mcm_string_2(arr,k+1,j);
         int temp = t1.first + t2.first + arr[i-1]*arr[j]*arr[k];
         if(ans>temp){
             ans = temp;
