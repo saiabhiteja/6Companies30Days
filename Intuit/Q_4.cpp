@@ -19,7 +19,7 @@ void helper(string s,string& ans,int k,int n,int ind){
         }
         for(int i = ind ;i<(n-1);i++ ){
             char chi = s[i] ;
-            for(int j = ind+1;j<n;j++){
+            for(int j = i+1;j<n;j++){
                 char chj = s[j] ;
                 if(chj>chi){
                     swap(s[i],s[j]);
